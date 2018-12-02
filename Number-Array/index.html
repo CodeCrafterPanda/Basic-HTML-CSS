@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Array App</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: grey;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        
+        
+        #main-wrapper {
+            width: 50%;
+            background-color: whitesmoke;
+            margin: 20px;
+            padding: 20px;
+            margin-left: 25%;
+            border-radius: 0 90px 0 90px;
+            box-shadow: 0 0 45px black;
+            text-align: center;
+        }
+        
+        #color-display {
+            /*border-radius: 0 90px 0 90px;*/
+            /* box-shadow: 0 0 45px purple; */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <h1>Number Array</h1>
+        <div id="display"></div>
+        
+    </div>
+    <script>
+		var output = '';
+		var numbers = [];
+		for(var i = 0;i<30;i++){
+			numbers.push(Math.floor((Math.random() * 10000) + 1));
+		}
+		var largest = numbers[0];
+		var smallest = numbers[0];
+		output += largest;
+		for(var i = 1;i<numbers.length;i++){
+			output +=' , '+numbers[i]+'  ';
+			if(numbers[i] > largest){
+				largest = numbers[i];
+			}
+			if(numbers[i] < smallest){
+				smallest = numbers[i];
+			}
+		}
+		output += '<br>Largest number from above array is: '+largest;
+		output += '<br>Smallest number from above array is: '+smallest;
+		document.getElementById('display').innerHTML = output;
+    </script>
+</body>
+
+</html>

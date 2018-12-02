@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Technologies</title>
+    <link rel="icon" type="icon" href="img/angular.png">
+    <style>
+        body{
+            background-color: whitesmoke;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        table{
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            width:100%;
+            text-align: center;
+
+        }
+        td, th
+        {
+            font-size:1em;
+            padding:3px 7px 2px 7px;
+            #border: dotted 1px;
+            border-radius: 10px;
+            text-align: justify;
+        }
+
+        img{
+            border-radius: 10px;
+            #box-shadow: 0 0 10px black;
+        }
+        iframe{
+            border-radius: 20px;
+            box-shadow: 0 0 50px black;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        #overview-img{
+            border-radius: 20px;
+            box-shadow: 0 0 50px black;
+        }
+
+        #main-table-head{
+            #background-color: blue;
+        }
+        #main-table-foot{
+            #background-color: blue;
+        }
+        #main-table-body{
+
+        }
+        #nav1, #nav2, #nav3, #nav4{
+            box-shadow: 0 0 20px black;
+            text-align: center;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #nav1f, #nav2f, #nav3f, #nav4f{
+            box-shadow: 0 0 20px black;
+            text-align: center;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #nav-foot1, #nav-foot2{
+
+        }
+
+        #h-nav1,#h-nav2,#h-nav3,#h-nav4,#h-nav5,#h-nav6{
+            padding: 2px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 0px 115px 0px 115px;
+        }
+        #f-nav1,#f-nav2,#f-nav3,#f-nav4,#f-nav5,#f-nav6{
+            padding: 2px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 0px 115px 0px 115px;
+        }
+
+        #introduction,#overview,#Details,#tutors{
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            box-shadow: 0 0 20px black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #html{
+            text-align: center;
+            width: 50%;
+            margin-left: 50%;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            box-shadow: 0 0 20px black;
+            border-radius: 115px 0px 115px 0px;
+        }
+        #css{
+            text-align: center;
+            width: 50%;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #js{
+            text-align: center;
+            width: 50%;
+            margin-left: 50%;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #jquery{
+            text-align: center;
+            width: 50%;
+            margin-left: 25%;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #bootstrap{
+            text-align: center;
+            width: 50%;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #angular{
+            text-align: center;
+            width: 50%;
+            margin-left: 50%;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            box-shadow: 0 0 20px black;
+            border-radius: 115px 0px 115px 0px;
+        }
+        #mmtuts,#naveen-saggam{
+            text-align: center;
+            margin-left: 25%;
+            width: 50%;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 115px 0px 115px 0px;
+        }
+        #nav-heading{
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 10px;
+
+        }
+        #nav-footer{
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px black;
+            background: linear-gradient(#92a4c0,#f4adad,#87e5da);
+            border-radius: 10px;
+        }
+        #box{
+            width: 90%;
+            margin-left: 5%;
+            background-color: #87e5da;
+            border-radius: 115px 0px 115px 0px;
+            padding: 10px;
+            box-shadow: 0 0 40px black;
+        }
+        #div-jquery{
+            text-align: center;
+        }
+        #div-bootstrap{
+            text-align: center;
+        }
+        #div-angular{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--Main Body Table Starts Here -->
+    <table>
+        <thead id="main-table-head">
+        <tr>
+            <th rowspan="2" id="nav-head1" width="15%">
+                <ul type="none">
+                    <li id="h-nav1"><a href="#html">HTML</a></li>
+                    <li id="h-nav2"><a href="#css">CSS</a></li>
+                    <li id="h-nav3"><a href="#js">JavaScript</a></li>
+                </ul>
+            </th>
+            <!--Main Navigation-->
+            <th width="70%">
+                <table id="main-nav">
+                    <tr>
+                        <td id="nav1"><a href="#introduction">Introduction</a></td>
+                        <td id="nav2"><a href="#overview">Overview</a></td>
+                        <td id="nav3"><a href="#Details">Details</a></td>
+                        <td id="nav4"><a href="#tutors">TopTutors</a></td>
+                    </tr>
+                </table>
+            </th>
+            <!--Main Navigation Ends Here-->
+            <th rowspan="2" id="nav-head2" width="15%">
+                <ul type="none">
+                    <li id="h-nav4"><a href="#jquery">jQuery</a></li>
+                    <li id="h-nav5"><a href="#bootstrap">Bootstrap</a></li>
+                    <li id="h-nav6"><a href="#angular">Angular</a></li>
+                </ul>
+            </th>
+        </tr>
+        <!--Main Heading Starts Here -->
+        <tr>
+            <th width="70%">
+                <h1 id="nav-heading">UI Technologies</h1>
+            </th>
+        </tr>
+        <!--Main Heading Ends Here-->
+        </thead>
+        <!--Main Table Body Starts Here-->
+        <tbody id="main-table-body">
+        <!--Introduction Part Starts Here-->
+        <tr>
+            <th colspan="3" id="introduction"><h2>Introduction</h2></th>
+        </tr>
+
+        <tr >
+            <div id="intro-table">
+                <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, deserunt, doloremque error eum harum illo modi nemo, pariatur saepe sequi tenetur veritatis? Dicta doloremque eligendi enim, nemo officiis quis tempora ullam. Aliquid, consequuntur eaque, ex in iure minus mollitia nemo nesciunt nobis numquam porro, quaerat vel vero voluptate voluptatibus voluptatum?</p></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at corporis est eveniet illum iste labore modi nisi, nulla provident quis reiciendis rem rerum saepe voluptas. Dignissimos rem sit voluptates.</p></td>
+                            <td>
+                                <div>
+                                    <iframe width="600" height="350" src="https://www.youtube.com/embed/v_nVmk3z28Q?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, vitae.</p>
+                                </div>
+                            </td>
+                            <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi architecto aut consequuntur excepturi fuga fugiat ipsam libero magnam magni, molestiae nihil nostrum pariatur sint sit tempora tempore tenetur ullam?</p></td>
+                        </tr>
+                    </table>
+
+                </td>
+                <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur consequuntur error eveniet ex fuga id illum laudantium magni maxime nihil odit officiis, placeat quaerat, quo sequi tempora vero voluptatibus. Alias animi delectus deleniti dicta doloremque est, et impedit ipsum minima nihil, nulla officiis perspiciatis quasi sed sunt tempora voluptatum?</p></td>
+            </div>
+        </tr>
+        <!--Introduction Part Ends Here-->
+        <!--Overview Part Starts Here-->
+        <tr>
+
+            <th colspan="3" id="overview"><h2>Overview</h2></th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>Angular</li>
+                </ul>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi dolore doloremque ea, eius expedita hic laborum magni natus porro quasi quidem quos reiciendis rerum velit voluptatem voluptatum! A, sint!</p>
+
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at corporis est eveniet illum iste labore modi nisi, nulla provident quis reiciendis rem rerum saepe voluptas. Dignissimos rem sit voluptates.</p></td>
+                        <td>
+                            <div>
+
+                                <img id="overview-img" src="img/UI_Framework.png" width="600" height="350">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, vitae.</p>
+                            </div>
+                        </td>
+                        <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi architecto aut consequuntur excepturi fuga fugiat ipsam libero magnam magni, molestiae nihil nostrum pariatur sint sit tempora tempore tenetur ullam?</p></td>
+                    </tr>
+                </table>
+
+            </td>
+            <td><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur consequuntur error eveniet ex fuga id illum laudantium magni maxime nihil odit officiis, placeat quaerat, quo sequi tempora vero voluptatibus. Alias animi delectus deleniti dicta doloremque est, et impedit ipsum minima nihil, nulla officiis perspiciatis quasi sed sunt tempora voluptatum?</p></td>
+        </tr>
+        <!--Overview Part Ends Here-->
+        <!--Details Part Starts -->
+        <tr>
+            <th colspan="3" id="Details"><h2>Details</h2></th>
+        </tr>
+        <!--HTML Starts Here-->
+        <tr>
+            <th colspan="3" ><h2 id="html">HTML</h2></th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>HTML versions timeline</h3>
+                <ol>
+                    <li>HTML 2.0 was published on November 24, 1995</li>
+                    <li>HTML 3.2 was published on January 14, 1997</li>
+                    <li>HTML 4.0 was published on December 18, 1997</li>
+                    <li>HTML 4.0 was reissued onApril 24, 1998</li>
+                    <li>HTML 4.01 was published onDecember 24, 1999</li>
+                    <li>HTML5 was published on October 28, 2014</li>
+                    <li>HTML 5.1 was published on November 1, 2016</li>
+                    <li>HTML 5.2 was published on December 14, 2017</li>
+                </ol>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, deserunt, doloremque error eum harum illo modi nemo, pariatur saepe sequi tenetur veritatis? Dicta doloremque eligendi enim, nemo officiis quis tempora ullam. Aliquid, consequuntur eaque, ex in iure minus mollitia nemo nesciunt nobis numquam porro, quaerat vel vero voluptate voluptatibus voluptatum?</p></td>
+            <td>
+                <img src="img/html.png" width="150" height="300">
+            </td>
+        </tr>
+        <!--HTML Ends Here-->
+        <!--CSS Starts Here-->
+        <tr>
+            <th colspan="3" ><h2 id="css">CSS</h2></th>
+        </tr>
+        <tr>
+            <td>
+                <img src="img/css.png" width="150" height="300">
+
+            </td>
+            <td colspan="2">
+                <h3>CSS Level timeline</h3>
+                <ol>
+                    <li>CSS level 1, published on December 17, 1996</li>
+                    <li>CSS level 2, published in May 1998</li>
+                    <li>CSS 2.1 was planned as the first and final revision of level 2—but low priority work on CSS 2.2 began in 2015</li>
+                    <li> CSS level 3, which was started in 1998, is still under development as of 2014.</li>
+
+                </ol>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illo, omnis? Blanditiis dicta dolor est facilis minima modi sunt voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, deserunt, doloremque error eum harum illo modi nemo, pariatur saepe sequi tenetur veritatis? Dicta doloremque eligendi enim, nemo officiis quis tempora ullam. Aliquid, consequuntur eaque, ex in iure minus mollitia nemo nesciunt nobis numquam porro, quaerat vel vero voluptate voluptatibus voluptatum?</p>
+            </td>
+        </tr>
+        <!--CSS Ends Here-->
+        <!--JavaScript Starts Here-->
+        <tr>
+            <th colspan="3" ><h2 id="js">JavaScript</h2></th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>JavaScript timeline</h2>
+                <ol>
+                    <li>Beginnings at Netscape In 1993</li>
+                    <li>Server-side JavaScript In December 1995</li>
+                    <li>Adoption by Microsoft Microsoft script technologies including VBScript and JScript were released in 1996.</li>
+                    <li>Standardization In November 1996, Netscape submitted JavaScript to ECMA International to carve out a standard specification</li>
+
+                </ol>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illo, omnis? Blanditiis dicta dolor est facilis minima modi sunt voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, deserunt, doloremque error eum harum illo modi nemo, pariatur saepe sequi tenetur veritatis? Dicta doloremque eligendi enim, nemo officiis quis tempora ullam. Aliquid, consequuntur eaque, ex in iure minus mollitia nemo nesciunt nobis numquam porro, quaerat vel vero voluptate voluptatibus voluptatum?</p>
+            </td>
+            <td>
+                <img src="img/js.png" width="150" height="300">
+            </td>
+        </tr>
+        <!--Javascripts Ends Here-->
+        <tr>
+            <th colspan="3"><h2 id="jquery">jQuery</h2></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table width="100%">
+                    <tr>
+                        <td width="35%">
+                            <h2>Version TimeLine:</h2>
+                            <ol>
+                                <li>Version 1.0 on August 26, 2006</li>
+                                <li>Version 2.0 on April 18, 2013 </li>
+                                <li>Version 3.3 on January 19, 2018</li>
+                            </ol>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea error facere odio perferendis? Harum inventore sed vel voluptate! Animi assumenda autem deleniti eos eveniet impedit itaque numquam sed vel.</p>
+                        </td>
+                        <td width="30%" >
+                            <div id="div-jquery">
+                                <img src="img/jQuery.png" width="150" height="150">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at consequuntur dignissimos dolorem eum neque nihil quasi, tenetur voluptas voluptatibus?</p>
+                        </td>
+                        <td width="35%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus atque consequuntur culpa cupiditate dolores earum, est exercitationem, explicabo fugit harum hic incidunt itaque laborum magnam molestias natus nihil perferendis perspiciatis quos reiciendis rerum similique tempore velit, vero. Aperiam aspernatur dolores doloribus, esse ex fugit in vel. Aliquid debitis eligendi illum? Dolore fugiat quas qui sit voluptatum? A aliquid at blanditiis consequatur consequuntur deleniti distinctio dolorem dolores dolorum eaque error eveniet fuga, incidunt ipsa iure, mollitia nemo omnis quia quod ratione reiciendis sint vero voluptatum. Ab corporis dolor, esse eveniet harum in inventore ipsam, iste magnam, praesentium quasi veniam vero?</td>
+
+                    </tr>
+                </table>
+
+            </td>
+
+        </tr>
+        <tr>
+            <th colspan="3" ><h2 id="bootstrap">BootStrap</h2></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table width="100%">
+                    <tr>
+                        <td width="30%">
+                            <div id="div-bootstrap">
+                                <img src="img/bootstrap-stack.png" width="150" height="150">
+                            </div>
+                        </td>
+                        <td colspan="2" width="70%">
+                            <h2>Version TimeLine:</h2>
+                            <ol>
+                                <li>1.0 on August 26, 2006</li>
+                                <li>2.0 on April 18, 2013 </li>
+                                <li>3.0 on June 9, 2016</li>
+                                <li>3.3 on January 19, 2018</li>
+                            </ol>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea error facere odio perferendis? Harum inventore sed vel voluptate! Animi assumenda autem deleniti eos eveniet impedit itaque numquam sed vel.</p>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+
+        </tr>
+        <tr>
+            <th colspan="3" ><h2 id="angular">Angular</h2></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2" width="70%">
+                            <h2>Version TimeLine:</h2>
+                            <ol>
+                                <li>Angular 2.0 was announced at the ng-Europe conference 22-23. October 2014</li>
+                                <li>On 13 December 2016 Angular 4 was announced</li>
+                                <li>Angular 5 was released on November 1, 2017</li>
+                                <li>Angular 6 was released on May 4, 2018</li>
+                            </ol>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea error facere odio perferendis? Harum inventore sed vel voluptate! Animi assumenda autem deleniti eos eveniet impedit itaque numquam sed vel.</p>
+
+                        </td>
+                        <td width="30%">
+                            <div id="div-angular">
+                                <img src="img/angular.png" width="150" height="150">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <th id="tutors" colspan="3"><h2>TopTutors</h2></th>
+        </tr>
+        <tr>
+            <th  colspan="2"><h2 id="mmtuts">Clever-Techie</h2></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table>
+                    <tr>
+                        <td>
+                            <iframe width="600" height="350" src="https://www.youtube.com/embed/VaW4na2qkwQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </td>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, aperiam dignissimos error excepturi fugiat inventore molestias, nesciunt pariatur saepe similique tempora. Accusamus atque corporis, cum dignissimos dolorem eaque error est explicabo harum hic in minima nisi officia quae quibusdam quisquam quo recusandae reiciendis similique suscipit ullam veritatis voluptatem. Ab accusamus aliquam animi at minima repellendus sit! Accusamus aperiam architecto assumenda autem cumque dolor ea eius et id in, ipsam nisi non optio quidem quisquam quod quos recusandae repellat repudiandae suscipit, tempora vel voluptatem? Commodi corporis deserunt ea est facere officiis praesentium. Ab inventore officia porro, sequi sint tenetur voluptas voluptatem. At blanditiis commodi esse ipsa optio provident, quasi sapiente ullam. Ad beatae consectetur delectus dolorem dolores eaque fugiat illum impedit ipsum libero maxime minus molestias nihil nostrum odio odit pariatur perferendis placeat, quaerat quia reprehenderit sequi, sunt vel veniam voluptatum? Aperiam cupiditate deleniti dignissimos distinctio eum minima perspiciatis voluptatem.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <th  colspan="2"><h2 id="naveen-saggam">Naveen Saggam</h2></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae dolorum error itaque nesciunt possimus praesentium quidem similique tempora? Accusantium cumque doloremque eligendi enim ex excepturi fugit non quis vel vitae! A aliquam autem, cupiditate, dolorem dolorum eveniet excepturi fugit, harum incidunt molestias natus nihil nisi pariatur placeat possimus quae quis ratione reiciendis repudiandae rerum totam vel voluptas voluptatem? Dolore est eveniet placeat rerum sunt. Ab accusamus aliquam aperiam autem commodi culpa, cum deleniti deserunt dolor expedita facere incidunt ipsam iusto maxime molestias, neque nesciunt nobis nostrum obcaecati odit pariatur perspiciatis qui quis quisquam recusandae repellendus sed sint totam, voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, beatae dicta fuga iste obcaecati ratione repellat sed. Alias, animi aperiam debitis error et facilis itaque libero magni perferendis perspiciatis placeat porro quae, ratione repellat, sit sunt voluptatem. Ab debitis dolorem dolorum ea est iusto minima nesciunt odit porro quo? Reprehenderit.</p>
+                        </td>
+                        <td>
+                            <iframe width="600" height="350" src="https://www.youtube.com/embed/qDUYIQZVQDE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+        <!--Main Table Body Ends Here-->
+        <tfoot id="main-table-foot">
+        <tr>
+            <th rowspan="2" id="nav-foot1" width="15%">
+                <ul type="none">
+                    <li id="f-nav1"><a href="#html">HTML</a></li>
+                    <li id="f-nav2"><a href="#css">CSS</a></li>
+                    <li id="f-nav3"><a href="#js">JavaScript</a></li>
+                </ul>
+            </th>
+            <!--Main Navigation-->
+            <th width="70%">
+                <table id="main-nav2">
+                    <tr>
+                        <td id="nav1f"><a href="#introduction">Introduction</a></td>
+                        <td id="nav2f"><a href="#overview">Overview</a></td>
+                        <td id="nav3f"><a href="#Details">Details</a></td>
+                        <td id="nav4f"><a href="#tutors">TopTutors</a></td>
+                    </tr>
+                </table>
+            </th>
+            <!--Main Navigation Ends Here-->
+            <th rowspan="2" id="nav-foot2" width="15%">
+                <ul type="none">
+                    <li id="f-nav4"><a href="#jquery">jQuery</a></li>
+                    <li id="f-nav5"><a href="#bootstrap">Bootstrap</a></li>
+                    <li id="f-nav6"><a href="#angular">Angular</a></li>
+                </ul>
+            </th>
+        </tr>
+        <!--Main footer Starts Here -->
+        <tr>
+            <th width="70%">
+                <div id="nav-footer">
+                    <h4>All Rights Reserved &copy; 2018</h4>
+                    <h3>Developed And Maintained By: U-Webtechie</h3>
+                </div>
+            </th>
+        </tr>
+        <!--Main footer Ends Here-->
+        </tfoot>
+    </table>
+</div>
+
+
+</body>
+</html>

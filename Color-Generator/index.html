@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Generator App</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: grey;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        
+        table {
+            width: 100%;
+            padding: 10px;
+        }
+        
+        td {
+            height: 50px;
+        }
+        
+        #main-wrapper {
+            width: 50%;
+            background-color: whitesmoke;
+            margin: 20px;
+            padding: 20px;
+            margin-left: 25%;
+            border-radius: 0 90px 0 90px;
+            box-shadow: 0 0 45px black;
+            text-align: center;
+        }
+        
+        #color-display {
+            /*border-radius: 0 90px 0 90px;*/
+            /* box-shadow: 0 0 45px purple; */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <h1>Color Change On Slider</h1>
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <td colspan="2" id="color-display"></td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <form>
+                            <tr>
+                                <td><label id="red-text"><h3>RED</h3></label></td>
+                                <td>0<input type="range" min="0" max="255" id="red" value="0">255</td>
+                            </tr>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <tr>
+                                <td><label id="green-text"><h3>GREEN</h3></label></td>
+                                <td>0<input type="range" min="0" max="255" id="green" value="0">255</td>
+                            </tr>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <tr>
+                                <td><label id="blue-text"><h3>BLUE</h3></label></td>
+                                <td>0<input type="range" min="0" max="255" id="blue" value="0">255</td>
+                            </tr>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <h3>Color Value:</h3>
+                    </td>
+                    <td id="color-display1"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var red = $("#red").val();
+            var green = $("#green").val();
+            var blue = $("#blue").val();
+            $("#color-display").css({
+                "background-color": "rgb(" + red + "," + green + "," + blue + ")"
+            });
+
+            $("#color-display1").html("<h3>rgb(" + red + "," + green + "," + blue + ")</h3>");
+
+        });
+
+        $("input").change(function() {
+            var red = $("#red").val();
+            var green = $("#green").val();
+            var blue = $("#blue").val();
+            $("#color-display").css({
+                "background-color": "rgb(" + red + "," + green + "," + blue + ")"
+            });
+
+            $("#red-text").css({
+                "color": "rgb(" + red + "," + 0 + "," + 0 + ")"
+            });
+
+            $("#green-text").css({
+                "color": "rgb(" + 0 + "," + green + "," + 0 + ")"
+            });
+
+            $("#blue-text").css({
+                "color": "rgb(" + 0 + "," + 0 + "," + blue + ")"
+            });
+
+            $("#color-display1").html("<h3>rgb(" + red + "," + green + "," + blue + ")</h3>");
+        });
+    </script>
+</body>
+
+</html>
