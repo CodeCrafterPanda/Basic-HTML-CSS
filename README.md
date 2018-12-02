@@ -1,5 +1,5 @@
 # Basic-HTML-CSS
-<br><br>
+<br>
 
 # UI-Technologies: <a href="http://thirsty-wilson-ed78b5.netlify.com" target="_blank">Demo</a>
 It is a single page designed using only HTML table and basic CSS
